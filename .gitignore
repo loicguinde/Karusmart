@@ -1,0 +1,2 @@
+# Fichiers runtime Claude Code, non pertinents à versionner
+.claude/scheduled_tasks.lock
