@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/classical-b85c53e7-b20d-431e-b6a6-9661aa5850c0/styles.css">
+<script src="_ds/classical-b85c53e7-b20d-431e-b6a6-9661aa5850c0/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<style>
+  body { margin: 0; text-wrap: pretty; background: var(--color-bg); }
+  a { color: var(--color-accent-700); text-decoration: none; }
+  a:hover { color: var(--color-accent); }
+  .kz-just { text-align: justify; hyphens: auto; hyphenate-limit-chars: 6 3 3; }
+  @media (max-width: 720px) { .kz-just { text-align: left; } }
+  .nav a[aria-current='page'] { color: var(--color-accent); }
+</style>
+</helmet>
+
+<div style="min-height: 100vh; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body);">
+
+  <nav class="nav" style="position: sticky; top: 0; z-index: 20; background: var(--color-bg); gap: 18px;">
+    <span class="nav-brand" style="cursor: pointer; letter-spacing: 0.01em;" onClick="{{ goHome }}">{{ siteName }}</span>
+    <a href="#" style="cursor: pointer;" onClick="{{ goHome }}" aria-current="{{ navHome }}">Accueil</a>
+    <a href="#" style="cursor: pointer;" onClick="{{ goHouses }}" aria-current="{{ navHouses }}">Les maisons</a>
+    <a href="#" style="cursor: pointer;" onClick="{{ goContact }}" aria-current="{{ navContact }}">Contact</a>
+    <button type="button" class="btn btn-primary" onClick="{{ goContact }}">Nous écrire</button>
+  </nav>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <div>
+    <section style="max-width: 1200px; margin: 0 auto; padding: 84px clamp(20px, 5vw, 72px) 0;">
+      <span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); font-feature-settings: 'tnum' 1; margin: 0 0 14px;">Cinq maisons — Guadeloupe</span>
+      <h1 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(42px, 6.4vw, 88px); line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 0 -0.042em;">
+        <span style="display: block;">Des maisons ouvertes</span>
+        <span style="display: block;">sur les alizés.</span>
+      </h1>
+      <p style="font-size: 17px; line-height: 28px; max-width: 58ch; margin: 34px 0 0; color: color-mix(in srgb, var(--color-text) 82%, transparent);">Cinq maisons de vacances en Guadeloupe, de Deshaies à Saint-François, tenues par une même famille. Pas de réservation automatique&nbsp;: vous écrivez, nous répondons, et nous préparons la maison pour vous.</p>
+      <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: 28px;">
+        <button type="button" class="btn btn-primary" onClick="{{ goHouses }}">Voir les maisons</button>
+        <button type="button" class="btn btn-ghost" onClick="{{ goContact }}">Demander une disponibilité</button>
+      </div>
+    </section>
+
+    <section style="max-width: 1200px; margin: 0 auto; padding: 48px clamp(20px, 5vw, 72px) 0;">
+      <figure class="plate" style="margin: 0;">
+        <image-slot id="kz-hero" shape="rect" style="width: 100%; height: clamp(280px, 52vh, 560px);" placeholder="PHOTO D'AMBIANCE — vue mer / végétation tropicale (paysage, 2400×1200 min)"></image-slot>
+      </figure>
+      <p style="font-size: 13px; line-height: 28px; letter-spacing: 0.02em; color: color-mix(in srgb, var(--color-text) 62%, transparent); margin: 12px 0 0;">Anse tranquille, côte sous le vent — remplacez cette photo par la vôtre.</p>
+    </section>
+
+    <section style="max-width: 1200px; margin: 0 auto; padding: 72px clamp(20px, 5vw, 72px) 0;">
+      <hr class="hr" style="margin: 0 0 40px;" />
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px 48px;">
+        <div>
+          <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: 26px; line-height: 28px; margin: 0;">Cinq maisons, cinq îles</h2>
+          <p class="kz-just" style="font-size: 15.5px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 78%, transparent);">Grande-Terre pour les lagons et les plages blanches, Basse-Terre pour la forêt et les rivières, Marie-Galante pour le temps qui ralentit. Chaque maison a été choisie pour un usage précis, pas pour remplir un catalogue.</p>
+        </div>
+        <div>
+          <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: 26px; line-height: 28px; margin: 0;">Tenues à la main</h2>
+          <p class="kz-just" style="font-size: 15.5px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 78%, transparent);">Ménage complet avant chaque arrivée, linge de maison fourni, accueil sur place avec les clés et les bonnes adresses du coin. Un numéro unique pendant tout le séjour.</p>
+        </div>
+        <div>
+          <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: 26px; line-height: 28px; margin: 0;">Sans intermédiaire</h2>
+          <p class="kz-just" style="font-size: 15.5px; line-height: 28px; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 78%, transparent);">Vous traitez directement avec le propriétaire&nbsp;: pas de commission de plateforme, des dates discutables et un séjour qu'on peut adapter à votre famille.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="maisons" style="max-width: 1200px; margin: 0 auto; padding: 84px clamp(20px, 5vw, 72px) 0;">
+      <hr class="hr" style="margin: 0 0 40px;" />
+      <span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); font-feature-settings: 'tnum' 1; margin: 0 0 14px;">Les maisons</span>
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(32px, 4vw, 48px); line-height: 1.12; letter-spacing: -0.008em; margin: 0 0 0 -0.042em;">Choisissez votre côte.</h2>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 44px 36px; margin-top: 48px;">
+        <sc-for list="{{ houses }}" as="h" hint-placeholder-count="5">
+          <article class="card" style="display: flex; flex-direction: column; gap: 0; padding: 0; overflow: hidden;">
+            <div class="plate" style="border: 0;">
+              <image-slot id="{{ h.cardSlot }}" shape="rect" style="width: 100%; height: 240px;" placeholder="{{ h.cardPlaceholder }}"></image-slot>
+            </div>
+            <div style="display: flex; flex-direction: column; flex: 1; padding: 24px 24px 26px;">
+              <span class="card-kicker" style="font-feature-settings: 'tnum' 1;">{{ h.place }}</span>
+              <h3 class="card-title" style="margin: 8px 0 0; font-size: 28px; line-height: 32px;">{{ h.name }}</h3>
+              <p class="card-body" style="margin: 12px 0 0; line-height: 26px;">{{ h.blurb }}</p>
+              <p class="card-meta" style="margin: 16px 0 0; font-feature-settings: 'tnum' 1;">{{ h.summary }}</p>
+              <div style="display: flex; margin-top: 22px;">
+                <button type="button" class="btn btn-primary" onClick="{{ h.open }}">Découvrir</button>
+              </div>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="max-width: 1200px; margin: 0 auto; padding: 84px clamp(20px, 5vw, 72px) 96px;">
+      <hr class="hr" style="margin: 0 0 40px;" />
+      <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: 34px; line-height: 42px; margin: 0;">Une date en tête&nbsp;?</h2>
+      <p style="font-size: 15.5px; line-height: 28px; max-width: 58ch; margin: 18px 0 0; color: color-mix(in srgb, var(--color-text) 78%, transparent);">Dites-nous vos dates et le nombre de voyageurs&nbsp;: nous vous répondons sous 24&nbsp;heures avec les maisons libres et leur tarif.</p>
+      <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: 28px;">
+        <button type="button" class="btn btn-primary" onClick="{{ goContact }}">Formulaire de contact</button>
+        <a class="btn btn-ghost" href="{{ waHref }}">WhatsApp</a>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isHouse }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <section style="max-width: 1200px; margin: 0 auto; padding: 56px clamp(20px, 5vw, 72px) 0;">
+      <a href="#" style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;" onClick="{{ goHouses }}">← Toutes les maisons</a>
+      <span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); font-feature-settings: 'tnum' 1; margin: 34px 0 14px;">{{ house.place }}</span>
+      <h1 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(40px, 5.6vw, 72px); line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 0 -0.042em;">{{ house.name }}</h1>
+      <p style="font-size: 17px; line-height: 28px; max-width: 58ch; margin: 28px 0 0; color: color-mix(in srgb, var(--color-text) 82%, transparent);">{{ house.blurb }}</p>
+    </section>
+
+    <section style="max-width: 1200px; margin: 0 auto; padding: 44px clamp(20px, 5vw, 72px) 0;">
+      <figure class="plate" style="margin: 0;">
+        <image-slot id="{{ house.heroSlot }}" shape="rect" style="width: 100%; height: clamp(260px, 48vh, 520px);" placeholder="{{ house.heroPlaceholder }}"></image-slot>
+      </figure>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 16px;">
+        <sc-for list="{{ house.gallery }}" as="g" hint-placeholder-count="3">
+          <div class="plate" style="margin: 0;">
+            <image-slot id="{{ g.id }}" shape="rect" style="width: 100%; height: 180px;" placeholder="{{ g.label }}"></image-slot>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="max-width: 1200px; margin: 0 auto; padding: 72px clamp(20px, 5vw, 72px) 0;">
+      <hr class="hr" style="margin: 0 0 40px;" />
+      <div style="display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 28px clamp(28px, 6vw, 88px);">
+        <div>
+          <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: 34px; line-height: 42px; margin: 0;">La maison</h2>
+          <p class="kz-just" style="font-size: 16px; line-height: 28px; margin: 22px 0 0; color: color-mix(in srgb, var(--color-text) 82%, transparent);">{{ house.desc1 }}</p>
+          <p class="kz-just" style="font-size: 16px; line-height: 28px; margin: 22px 0 0; color: color-mix(in srgb, var(--color-text) 82%, transparent);">{{ house.desc2 }}</p>
+
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 28px; margin: 40px 0 0;">Situation</h3>
+          <p style="font-size: 15.5px; line-height: 28px; margin: 16px 0 0; color: color-mix(in srgb, var(--color-text) 78%, transparent);">{{ house.location }}</p>
+        </div>
+
+        <aside>
+          <h3 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 28px; margin: 0 0 18px;">Équipements</h3>
+          <table class="table" style="width: 100%;">
+            <tbody>
+              <sc-for list="{{ house.specs }}" as="s" hint-placeholder-count="8">
+                <tr>
+                  <td style="font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 62%, transparent); white-space: nowrap;">{{ s.label }}</td>
+                  <td style="font-size: 15.5px; text-align: right; font-feature-settings: 'tnum' 1;">{{ s.value }}</td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+          <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ false }}">
+            <p style="font-size: 15.5px; line-height: 28px; margin: 20px 0 0; font-feature-settings: 'tnum' 1; color: color-mix(in srgb, var(--color-text) 78%, transparent);">{{ house.price }}</p>
+          </sc-if>
+          <div style="display: flex; margin-top: 26px;">
+            <button type="button" class="btn btn-primary btn-block" onClick="{{ askHouse }}">Demander la disponibilité</button>
+          </div>
+          <p style="font-size: 13px; line-height: 24px; margin: 14px 0 0; color: color-mix(in srgb, var(--color-text) 62%, transparent);">Réponse sous 24&nbsp;h — ou par WhatsApp au {{ phone }}.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section style="max-width: 1200px; margin: 0 auto; padding: 84px clamp(20px, 5vw, 72px) 96px;">
+      <hr class="hr" style="margin: 0 0 40px;" />
+      <span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 22px;">Les autres maisons</span>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px 32px;">
+        <sc-for list="{{ others }}" as="o" hint-placeholder-count="4">
+          <div style="border-top: 1px solid var(--color-divider); padding-top: 16px;">
+            <a href="#" style="font-family: var(--font-heading); font-size: 22px; line-height: 28px; cursor: pointer; color: var(--color-text);" onClick="{{ o.open }}">{{ o.name }}</a>
+            <p style="font-size: 13px; line-height: 22px; letter-spacing: 0.04em; text-transform: uppercase; margin: 6px 0 0; color: color-mix(in srgb, var(--color-text) 62%, transparent);">{{ o.place }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+  <div>
+    <section style="max-width: 1200px; margin: 0 auto; padding: 72px clamp(20px, 5vw, 72px) 0;">
+      <span style="display: block; font-size: 13px; line-height: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-accent-700); margin: 0 0 14px;">Contact</span>
+      <h1 style="font-family: var(--font-heading); font-weight: 400; font-size: clamp(40px, 5.6vw, 72px); line-height: 1.08; letter-spacing: -0.01em; margin: 0 0 0 -0.042em;">Écrivez-nous.</h1>
+      <p style="font-size: 17px; line-height: 28px; max-width: 58ch; margin: 28px 0 0; color: color-mix(in srgb, var(--color-text) 82%, transparent);">Dites-nous vos dates, le nombre de voyageurs et la maison qui vous attire. Nous répondons personnellement, sous 24&nbsp;heures.</p>
+    </section>
+
+    <section style="max-width: 1200px; margin: 0 auto; padding: 56px clamp(20px, 5vw, 72px) 96px;">
+      <hr class="hr" style="margin: 0 0 40px;" />
+      <div style="display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 40px clamp(28px, 6vw, 88px);">
+        <div>
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+            <div class="card" style="padding: 32px;">
+              <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: 28px; line-height: 34px; margin: 0;">Message envoyé.</h2>
+              <p style="font-size: 15.5px; line-height: 28px; margin: 14px 0 0; color: color-mix(in srgb, var(--color-text) 78%, transparent);">Merci&nbsp;— nous revenons vers vous sous 24&nbsp;heures. Pour une réponse immédiate, WhatsApp reste le plus rapide.</p>
+              <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: 22px;">
+                <button type="button" class="btn btn-ghost" onClick="{{ resetForm }}">Envoyer un autre message</button>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+            <form onSubmit="{{ submit }}">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px 28px;">
+                <div class="field">
+                  <label for="kz-nom">Nom et prénom</label>
+                  <input class="input" id="kz-nom" name="nom" type="text" required="{{ true }}" placeholder="Marie Lambert" />
+                </div>
+                <div class="field">
+                  <label for="kz-email">E-mail</label>
+                  <input class="input" id="kz-email" name="email" type="email" required="{{ true }}" placeholder="marie@exemple.fr" />
+                </div>
+                <div class="field">
+                  <label for="kz-tel">Téléphone</label>
+                  <input class="input" id="kz-tel" name="tel" type="tel" placeholder="+33 6 12 34 56 78" />
+                </div>
+                <div class="field">
+                  <label for="kz-pers">Voyageurs</label>
+                  <input class="input" id="kz-pers" name="pers" type="number" min="1" max="20" placeholder="4" />
+                </div>
+                <div class="field">
+                  <label for="kz-arr">Arrivée souhaitée</label>
+                  <input class="input" id="kz-arr" name="arrivee" type="date" />
+                </div>
+                <div class="field">
+                  <label for="kz-dep">Départ souhaité</label>
+                  <input class="input" id="kz-dep" name="depart" type="date" />
+                </div>
+              </div>
+              <div class="field" style="margin-top: 22px;">
+                <label for="kz-msg">Votre message</label>
+                <textarea class="input" id="kz-msg" name="message" rows="6" style="resize: vertical; font-family: var(--font-body);" defaultValue="{{ prefill }}" placeholder="La maison qui vous intéresse, vos dates, vos questions…"></textarea>
+              </div>
+              <div style="display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: center; margin-top: 26px;">
+                <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+                <span style="font-size: 13px; line-height: 22px; color: color-mix(in srgb, var(--color-text) 62%, transparent);">Aucune réservation en ligne — nous confirmons par e-mail.</span>
+              </div>
+            </form>
+          </sc-if>
+        </div>
+
+        <aside>
+          <h2 style="font-family: var(--font-heading); font-weight: 400; font-size: 24px; line-height: 28px; margin: 0 0 20px;">En direct</h2>
+          <div style="display: flex; flex-direction: column; gap: 18px;">
+            <div style="border-top: 1px solid var(--color-divider); padding-top: 14px;">
+              <p style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 6px; color: color-mix(in srgb, var(--color-text) 62%, transparent);">Téléphone</p>
+              <a href="{{ telHref }}" style="font-size: 17px; font-feature-settings: 'tnum' 1;">{{ phone }}</a>
+            </div>
+            <div style="border-top: 1px solid var(--color-divider); padding-top: 14px;">
+              <p style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 6px; color: color-mix(in srgb, var(--color-text) 62%, transparent);">WhatsApp</p>
+              <a href="{{ waHref }}" style="font-size: 17px;">Ouvrir la conversation</a>
+            </div>
+            <div style="border-top: 1px solid var(--color-divider); padding-top: 14px;">
+              <p style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 6px; color: color-mix(in srgb, var(--color-text) 62%, transparent);">E-mail</p>
+              <a href="{{ mailHref }}" style="font-size: 17px;">{{ email }}</a>
+            </div>
+            <div style="border-top: 1px solid var(--color-divider); padding-top: 14px;">
+              <p style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 6px; color: color-mix(in srgb, var(--color-text) 62%, transparent);">Sur place</p>
+              <p style="font-size: 15.5px; line-height: 26px; margin: 0; color: color-mix(in srgb, var(--color-text) 78%, transparent);">Accueil et remise des clés à la maison, 7&nbsp;j/7, de 8&nbsp;h à 20&nbsp;h (heure locale, UTC−4).</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </div>
+  </sc-if>
+
+  <footer style="border-top: 1px solid var(--color-divider);">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 40px clamp(20px, 5vw, 72px) 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px 48px; font-size: 13px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 66%, transparent);">
+      <div>
+        <p style="font-family: var(--font-heading); font-size: 20px; line-height: 26px; margin: 0 0 8px; color: var(--color-text);">{{ siteName }}</p>
+        <p style="margin: 0;">Locations saisonnières en Guadeloupe — Grande-Terre, Basse-Terre, Marie-Galante.</p>
+      </div>
+      <div>
+        <p style="margin: 0;">Mentions légales</p>
+        <p style="margin: 0;">Conditions de location</p>
+        <p style="margin: 0;">Politique de confidentialité</p>
+        <p style="margin: 0;">SIRET à compléter — taxe de séjour incluse</p>
+      </div>
+      <div>
+        <p style="margin: 0;"><a href="{{ telHref }}">{{ phone }}</a></p>
+        <p style="margin: 0;"><a href="{{ mailHref }}">{{ email }}</a></p>
+        <p style="margin: 0;"><a href="{{ waHref }}">WhatsApp</a></p>
+      </div>
+      <div>
+        <p style="margin: 0;"><a href="#">Instagram</a></p>
+        <p style="margin: 0;"><a href="#">Facebook</a></p>
+        <p style="margin: 0;">© 2026 — tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;siteName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Kaz Alizé — Locations Guadeloupe&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Marque&quot;},&quot;phone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;+590 690 00 00 00&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;bonjour@kazalize.gp&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;},&quot;showPrices&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenu&quot;}}">
+const HOUSES = [
+  {
+    id: 'flamboyant',
+    name: 'Villa Flamboyant',
+    place: 'Sainte-Anne — Grande-Terre',
+    blurb: "Une longue maison basse posée sur un jardin de flamboyants, à huit minutes à pied du sable blanc de la Caravelle.",
+    summary: '4 chambres · 8 voyageurs · piscine · vue mer',
+    desc1: "Les pièces s'ouvrent l'une après l'autre sur une galerie couverte qui fait tout le côté sud : c'est là qu'on prend le petit-déjeuner, qu'on lit à l'ombre à midi et qu'on dîne le soir quand l'air retombe. La cuisine, entièrement équipée, donne sur la même terrasse par un grand passe-plat.",
+    desc2: "Quatre chambres, toutes climatisées, chacune avec sa moustiquaire et son ventilateur de plafond. La piscine, longue de douze mètres, est éclairée le soir ; un carbet de jardin abrite le barbecue et une table de huit couverts.",
+    location: "À Sainte-Anne, quartier résidentiel calme au-dessus du bourg. Plage de la Caravelle à 800 m, marché de Sainte-Anne à 2 km, aéroport Pôle Caraïbes à 35 minutes. Localisation exacte communiquée à la réservation.",
+    price: 'À partir de 240 € la nuit — 7 nuits minimum en haute saison.',
+    specs: [
+      { label: 'Chambres', value: '4' },
+      { label: 'Capacité', value: "8 voyageurs" },
+      { label: 'Salles de bain', value: '3' },
+      { label: 'Piscine', value: 'Privée, 12 m' },
+      { label: 'Vue', value: 'Mer et jardin' },
+      { label: 'Climatisation', value: 'Toutes les chambres' },
+      { label: 'Wifi', value: 'Fibre' },
+      { label: 'Extérieur', value: 'Galerie, carbet, barbecue' },
+      { label: 'Parking', value: '2 voitures, clos' }
+    ]
+  },
+  {
+    id: 'zephyr',
+    name: 'Villa Zéphyr',
+    place: 'Le Gosier — Grande-Terre',
+    blurb: "Un plain-pied contemporain au-dessus de la baie, pensé pour deux familles qui veulent rester ensemble sans se marcher dessus.",
+    summary: '5 chambres · 10 voyageurs · piscine à débordement',
+    desc1: "Deux ailes séparées par un vaste séjour traversant : chacune a ses chambres, sa salle d'eau et son coin salon, et tout le monde se retrouve autour de la grande table et de la piscine à débordement qui prend toute la vue sur l'îlet du Gosier.",
+    desc2: "Le séjour s'ouvre en entier par des baies coulissantes ; la cuisine américaine est équipée pour dix couverts. Buanderie indépendante avec lave-linge et sèche-linge, ce qui change tout au bout de dix jours de plage.",
+    location: "Hauteurs du Gosier, à 5 minutes en voiture des plages de la Datcha et de l'anse Tabarin, 15 minutes de Pointe-à-Pitre. Commerces et restaurants du bourg à 1,5 km.",
+    price: 'À partir de 310 € la nuit — 7 nuits minimum en haute saison.',
+    specs: [
+      { label: 'Chambres', value: '5' },
+      { label: 'Capacité', value: '10 voyageurs' },
+      { label: 'Salles de bain', value: '4' },
+      { label: 'Piscine', value: 'À débordement' },
+      { label: 'Vue', value: 'Baie et îlet' },
+      { label: 'Climatisation', value: 'Toutes les pièces' },
+      { label: 'Wifi', value: 'Fibre' },
+      { label: 'Extérieur', value: 'Deck, transats, douche' },
+      { label: 'Parking', value: '3 voitures' }
+    ]
+  },
+  {
+    id: 'bananier',
+    name: 'Kaz Bananier',
+    place: 'Deshaies — Basse-Terre',
+    blurb: "Une case créole en bois, restaurée pièce par pièce, au milieu d'un jardin planté de bananiers et de balisiers.",
+    summary: '3 chambres · 6 voyageurs · jardin tropical · rivière',
+    desc1: "Bardage en bois peint, persiennes, toit de tôle sous les arbres : la maison a gardé ses volumes d'origine et sa véranda sur trois côtés. À l'intérieur, tout a été refait — cuisine complète, salle d'eau carrelée, literie neuve.",
+    desc2: "Le jardin descend vers une rivière où l'on peut se baigner. Pas de piscine ici, et c'est délibéré : la maison est faite pour ceux qui viennent pour la forêt, les cascades et le parc national plutôt que pour le lagon.",
+    location: "Sur les hauteurs de Deshaies, à 10 minutes de la plage de Grande Anse et du Jardin botanique, à 30 minutes des chutes du Carbet par la Traversée.",
+    price: 'À partir de 165 € la nuit — 5 nuits minimum.',
+    specs: [
+      { label: 'Chambres', value: '3' },
+      { label: 'Capacité', value: '6 voyageurs' },
+      { label: 'Salles de bain', value: '2' },
+      { label: 'Piscine', value: 'Non — rivière au jardin' },
+      { label: 'Vue', value: 'Jardin tropical' },
+      { label: 'Climatisation', value: '2 chambres' },
+      { label: 'Wifi', value: 'Oui' },
+      { label: 'Extérieur', value: 'Véranda, hamacs, potager' },
+      { label: 'Parking', value: '2 voitures' }
+    ]
+  },
+  {
+    id: 'caravelle',
+    name: 'Villa Caravelle',
+    place: 'Saint-François — Grande-Terre',
+    blurb: "Les pieds dans le lagon : une maison d'architecte ouverte plein ouest, pour les couchers de soleil et les départs en kayak.",
+    summary: '2 chambres · 4 voyageurs · accès direct lagon',
+    desc1: "Plus petite et plus précieuse que les autres : deux chambres seulement, un séjour tout en bois clair et une terrasse qui avance sur l'eau. Le lagon, ici, a soixante centimètres de fond sur trois cents mètres — on y marche, on y nage, on y dort presque.",
+    desc2: "Kayaks et paddle fournis. La marina, le golf et les restaurants de Saint-François sont à quelques minutes ; les plages sauvages de la Pointe des Châteaux à un quart d'heure de route.",
+    location: "Pointe des Basses, Saint-François, accès privé au lagon. Marina à 3 km, aéroport à 45 minutes.",
+    price: 'À partir de 220 € la nuit — 5 nuits minimum.',
+    specs: [
+      { label: 'Chambres', value: '2' },
+      { label: 'Capacité', value: '4 voyageurs' },
+      { label: 'Salles de bain', value: '2' },
+      { label: 'Piscine', value: 'Non — lagon privé' },
+      { label: 'Vue', value: 'Mer, plein ouest' },
+      { label: 'Climatisation', value: 'Toutes les chambres' },
+      { label: 'Wifi', value: 'Fibre' },
+      { label: 'Extérieur', value: 'Ponton, kayaks, paddle' },
+      { label: 'Parking', value: '2 voitures' }
+    ]
+  },
+  {
+    id: 'colibri',
+    name: 'Case Colibri',
+    place: 'Capesterre — Marie-Galante',
+    blurb: "Sur l'île aux cent moulins, une case blanche à cinq minutes de Feuillère, la plus longue plage de l'archipel.",
+    summary: '3 chambres · 6 voyageurs · piscine · plage à 400 m',
+    desc1: "Marie-Galante impose son rythme : les cabris sur la route, le rhum agricole, les plages vides en semaine. La maison suit le mouvement — murs blancs, sols en tomettes, larges ouvertures et une piscine entourée de cocotiers.",
+    desc2: "Trois chambres dont une en rez-de-jardin avec son entrée indépendante. Vélos à disposition pour faire le tour des distilleries et des moulins, et une cuisine d'été pour les poissons du matin.",
+    location: "Capesterre-de-Marie-Galante, à 400 m de la plage de la Feuillère. Traversée en bateau depuis Pointe-à-Pitre (45 min) ; véhicule conseillé sur l'île.",
+    price: 'À partir de 180 € la nuit — 5 nuits minimum.',
+    specs: [
+      { label: 'Chambres', value: '3' },
+      { label: 'Capacité', value: '6 voyageurs' },
+      { label: 'Salles de bain', value: '2' },
+      { label: 'Piscine', value: 'Privée, 8 m' },
+      { label: 'Vue', value: 'Jardin et cocotiers' },
+      { label: 'Climatisation', value: 'Toutes les chambres' },
+      { label: 'Wifi', value: 'Oui' },
+      { label: 'Extérieur', value: "Cuisine d'été, vélos" },
+      { label: 'Parking', value: '2 voitures' }
+    ]
+  }
+];
+
+class Component extends DCLogic {
+  state = { route: 'home', houseId: null, sent: false, prefill: '' };
+
+  go(route, houseId, prefill) {
+    this.setState({ route: route, houseId: houseId || null, sent: false, prefill: prefill || '' });
+    if (typeof window !== 'undefined') window.scrollTo(0, 0);
+  }
+
+  houseData() {
+    const h = HOUSES.find((x) => x.id === this.state.houseId) || HOUSES[0];
+    return Object.assign({}, h, {
+      heroSlot: 'kz-' + h.id + '-hero',
+      heroPlaceholder: 'PHOTO PRINCIPALE — ' + h.name + ' (paysage, 2000×1000 min)',
+      gallery: [
+        { id: 'kz-' + h.id + '-g1', label: 'Galerie 1 — séjour / terrasse' },
+        { id: 'kz-' + h.id + '-g2', label: 'Galerie 2 — chambre' },
+        { id: 'kz-' + h.id + '-g3', label: 'Galerie 3 — extérieur / piscine' }
+      ]
+    });
+  }
+
+  renderVals() {
+    const p = this.props;
+    const siteName = p.siteName ?? 'Kaz Alizé — Locations Guadeloupe';
+    const phone = p.phone ?? '+590 690 00 00 00';
+    const email = p.email ?? 'bonjour@kazalize.gp';
+    const route = this.state.route;
+    const house = this.houseData();
+
+    const mk = (h) => Object.assign({}, h, {
+      cardSlot: 'kz-' + h.id + '-card',
+      cardPlaceholder: 'PHOTO — ' + h.name + ' (paysage, 1600×1200)',
+      open: () => this.go('house', h.id)
+    });
+
+    return {
+      siteName: siteName,
+      phone: phone,
+      email: email,
+      telHref: 'tel:' + phone.replace(/[^+0-9]/g, ''),
+      waHref: 'https://wa.me/' + phone.replace(/[^0-9]/g, ''),
+      mailHref: 'mailto:' + email,
+      showPrices: p.showPrices ?? true,
+      houses: HOUSES.map(mk),
+      others: HOUSES.filter((h) => h.id !== house.id).map(mk),
+      house: house,
+      isHome: route === 'home',
+      isHouse: route === 'house',
+      isContact: route === 'contact',
+      navHome: route === 'home' ? 'page' : 'false',
+      navHouses: route === 'house' ? 'page' : 'false',
+      navContact: route === 'contact' ? 'page' : 'false',
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      prefill: this.state.prefill,
+      goHome: (e) => { if (e) e.preventDefault(); this.go('home'); },
+      goHouses: (e) => {
+        if (e) e.preventDefault();
+        if (this.state.route === 'home') {
+          const el = document.getElementById('maisons');
+          if (el) { window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - 60); return; }
+        }
+        this.setState({ route: 'home', sent: false });
+        setTimeout(() => {
+          const el = document.getElementById('maisons');
+          if (el) window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - 60);
+        }, 30);
+      },
+      goContact: (e) => { if (e) e.preventDefault(); this.go('contact'); },
+      askHouse: () => this.go('contact', null, 'Bonjour, je souhaite connaître les disponibilités de ' + house.name + ' (' + house.place + ') pour les dates suivantes : '),
+      submit: (e) => { e.preventDefault(); this.setState({ sent: true }); window.scrollTo(0, 0); },
+      resetForm: () => this.setState({ sent: false, prefill: '' })
+    };
+  }
+}
+
+</script>
+</body>
+</html>

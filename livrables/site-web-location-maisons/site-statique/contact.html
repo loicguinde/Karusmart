@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Kaz Alizé — Locations Guadeloupe</title>
+<meta name="description" content="Kaz Alizé — Locations Guadeloupe — cinq maisons de vacances en Guadeloupe, contact direct avec le propriétaire.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav-brand" href="index.html">Kaz Alizé — Locations Guadeloupe</a>
+    <a href="index.html">Accueil</a>
+    <a href="index.html#maisons">Les maisons</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+    <a class="btn btn-primary" href="contact.html">Nous écrire</a>
+  </nav>
+
+  <section class="section section-top">
+    <span class="kicker">Contact</span>
+    <h1>Écrivez-nous.</h1>
+    <p class="lead">Dites-nous vos dates, le nombre de voyageurs et la maison qui vous attire. Nous répondons personnellement, sous 24&nbsp;heures.</p>
+  </section>
+
+  <section class="section section-end">
+    <hr class="hr">
+    <div class="contact-grid">
+      <div>
+        <div id="contact-success" class="card" style="padding:32px; display:none;">
+          <h2>Message prêt.</h2>
+          <p>Votre messagerie va s'ouvrir avec votre demande pré-remplie. Il ne reste qu'à cliquer sur envoyer.</p>
+        </div>
+        <form id="contact-form">
+          <div class="form-grid">
+            <div class="field">
+              <label for="kz-nom">Nom et prénom</label>
+              <input class="input" id="kz-nom" name="nom" type="text" required placeholder="Marie Lambert">
+            </div>
+            <div class="field">
+              <label for="kz-email">E-mail</label>
+              <input class="input" id="kz-email" name="email" type="email" required placeholder="marie@exemple.fr">
+            </div>
+            <div class="field">
+              <label for="kz-tel">Téléphone</label>
+              <input class="input" id="kz-tel" name="tel" type="tel" placeholder="+33 6 12 34 56 78">
+            </div>
+            <div class="field">
+              <label for="kz-pers">Voyageurs</label>
+              <input class="input" id="kz-pers" name="pers" type="number" min="1" max="20" placeholder="4">
+            </div>
+            <div class="field">
+              <label for="kz-arr">Arrivée souhaitée</label>
+              <input class="input" id="kz-arr" name="arrivee" type="date">
+            </div>
+            <div class="field">
+              <label for="kz-dep">Départ souhaité</label>
+              <input class="input" id="kz-dep" name="depart" type="date">
+            </div>
+          </div>
+          <div class="field" style="margin-top:22px;">
+            <label for="kz-msg">Votre message</label>
+            <textarea class="input" id="kz-msg" name="message" rows="6" placeholder="La maison qui vous intéresse, vos dates, vos questions…"></textarea>
+          </div>
+          <div class="cta-row" style="align-items:center; margin-top:26px;">
+            <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+            <span class="fine-print">Aucune réservation en ligne — nous confirmons par e-mail.</span>
+          </div>
+        </form>
+      </div>
+
+      <aside>
+        <h2>En direct</h2>
+        <div class="contact-list">
+          <div class="contact-item">
+            <p class="contact-label">Téléphone</p>
+            <a href="tel:+590690000000">+590 690 00 00 00</a>
+          </div>
+          <div class="contact-item">
+            <p class="contact-label">WhatsApp</p>
+            <a href="https://wa.me/590690000000">Ouvrir la conversation</a>
+          </div>
+          <div class="contact-item">
+            <p class="contact-label">E-mail</p>
+            <a href="mailto:bonjour@kazalize.gp">bonjour@kazalize.gp</a>
+          </div>
+          <div class="contact-item">
+            <p class="contact-label">Sur place</p>
+            <p>Accueil et remise des clés à la maison, 7&nbsp;j/7, de 8&nbsp;h à 20&nbsp;h (heure locale, UTC−4).</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <script src="assets/contact.js"></script>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">Kaz Alizé — Locations Guadeloupe</p>
+        <p>Locations saisonnières en Guadeloupe — Grande-Terre, Basse-Terre, Marie-Galante.</p>
+      </div>
+      <div>
+        <p>Mentions légales</p>
+        <p>Conditions de location</p>
+        <p>Politique de confidentialité</p>
+        <p>SIRET à compléter — taxe de séjour incluse</p>
+      </div>
+      <div>
+        <p><a href="tel:+590690000000">+590 690 00 00 00</a></p>
+        <p><a href="mailto:bonjour@kazalize.gp">bonjour@kazalize.gp</a></p>
+        <p><a href="https://wa.me/590690000000">WhatsApp</a></p>
+      </div>
+      <div>
+        <p><a href="#">Instagram</a></p>
+        <p><a href="#">Facebook</a></p>
+        <p>© 2026 — tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

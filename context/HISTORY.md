@@ -9,6 +9,13 @@
 
 ## 2026-09-14
 
+### Nouveau projet : site web location de maisons
+- Nouveau projet identifié : création d'un site web vitrine pour la location de 5 maisons meublées en Guadeloupe
+- Prompt rédigé pour Claude Design (style chaleureux/local, fiches complètes par maison, contact par téléphone/email sans formulaire)
+- Ajouté à la liste des projets en cours dans CONTEXT.md
+
+## 2026-09-14
+
 ### Installation initiale du Jarvis
 - Workspace personnalisé pour Loïc, basé au Moule (Guadeloupe)
 - Profil principal : Employé (fonctionnaire d'État)

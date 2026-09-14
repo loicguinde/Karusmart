@@ -52,6 +52,7 @@ Liste des projets ou chantiers actifs sur lesquels je veux que Claude m'aide :
 - Portage d'un modèle d'optimisation de GAMS vers Python (projet MOSAICA — allocation de cultures en Guadeloupe)
 - Mise au point d'une application smartphone pour récolter des données de phénotypage de plantes chez des agriculteurs
 - Plans et financement de ma future maison
+- Création d'un site web vitrine pour la location de 5 maisons meublées en Guadeloupe
 
 ---
 
