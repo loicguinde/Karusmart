@@ -20,7 +20,7 @@
     ];
     const subject = encodeURIComponent('KARUSMART — ' + (data.get('objet') || 'Demande de contact'));
     const body = encodeURIComponent(lines.join('\n'));
-    window.location.href = 'mailto:contact@karusmart.fr?subject=' + subject + '&body=' + body;
+    window.location.href = 'mailto:jean-marc.blazy@inrae.fr?subject=' + subject + '&body=' + body;
 
     if (formWrap) formWrap.style.display = 'none';
     if (success) success.style.display = 'block';

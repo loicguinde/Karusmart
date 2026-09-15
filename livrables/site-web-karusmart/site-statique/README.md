@@ -5,20 +5,24 @@ Site vitrine institutionnel pour la micro-ferme expérimentale KARUSMART (INRAE,
 ## Structure
 
 ```
-index.html            page unique (hero, projet, ferme, partenaires, visiter, contact)
+index.html            page unique (hero, projet, ferme, bénéfices, partenaires, visiter, contact)
 assets/
   style.css            classes réutilisables (boutons, cartes, formulaire)
   contact.js           logique du formulaire de contact
+  photos/              photos réelles intégrées au site
 ```
+
+## Sources du contenu
+
+- Recherche web initiale (pages publiques INRAE et ADEME sur le dispositif KARUSMART)
+- Fiche officielle **"EXPLORER" — Trophées 2026 de l'adaptation au changement climatique (ARTISAN), INRAE/ADEME** : chiffres clés, bénéfices, gouvernance, budget et contact (fournie par Loïc le 2026-09-15)
 
 ## Contenu à valider avant publication
 
-Le contenu texte a été assemblé à partir d'une recherche web (pages publiques INRAE et ADEME sur le dispositif KARUSMART), pas de données internes. Tout est marqué **[à compléter]** ou signalé ici :
-
-- [ ] Chiffres scientifiques (bilan carbone, biodiversité, rendement) — actuellement `[résultat à compléter]`
-- [ ] Adresse complète du site et contact référent (section "Visiter, se former, collaborer" et footer)
-- [ ] Adresse e-mail de contact réelle (actuellement `contact@karusmart.fr`, à remplacer dans `assets/contact.js`)
-- [ ] Logos officiels ADEME / FEDER Guadeloupe / INRAE / UE PTEA (actuellement des blocs "LOGO" grisés)
+- [x] Chiffres scientifiques (carbone, biodiversité, productivité) — intégrés depuis la fiche EXPLORER
+- [ ] Adresse postale complète du site (section contact et footer)
+- [x] Contact réel : Jean-Marc Blazy — jean-marc.blazy@inrae.fr (source : fiche EXPLORER)
+- [ ] Logos officiels ADEME / FEDER Guadeloupe / INRAE / UE PTEA / Synergiles (actuellement des blocs "LOGO" grisés)
 - [x] Photo hero (vue aérienne des parcelles) intégrée
 - [ ] Photo réelle de la haie multifonctionnelle à la place de la zone hachurée "[photo à remplacer]"
 - [x] Statut de la certification AB : confirmé obtenue en 2018
