@@ -12,6 +12,7 @@ Ce dossier centralise tous les livrables produits par Claude dans ce workspace :
 | `presentations-documents/` | Présentations, rapports, documents d'étude |
 | `veille-actualites/` | Synthèses de veille produites via `/morning` ou la skill recherche-actualites |
 | `site-web-location-maisons/` | Site vitrine pour la location des 5 maisons meublées en Guadeloupe (design "Kaz Gwada" généré via Claude Design) |
+| `site-web-karusmart/` | Site vitrine institutionnel pour la micro-ferme expérimentale KARUSMART (INRAE Guadeloupe), généré via Claude Design |
 
 ## Règles
 
