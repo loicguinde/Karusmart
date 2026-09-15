@@ -20,7 +20,7 @@ Le contenu texte a été assemblé à partir d'une recherche web (pages publique
 - [ ] Adresse e-mail de contact réelle (actuellement `contact@karusmart.fr`, à remplacer dans `assets/contact.js`)
 - [ ] Logos officiels ADEME / FEDER Guadeloupe / INRAE / UE PTEA (actuellement des blocs "LOGO" grisés)
 - [ ] Photos réelles (vue aérienne des parcelles, haie multifonctionnelle) à la place des zones hachurées "[photo à remplacer]"
-- [ ] Statut réel de la certification AB (annoncé "en cours" d'après la source ADEME 2021, à recouper)
+- [x] Statut de la certification AB : confirmé obtenue en 2018
 - [ ] Schéma des blocs de cultures : remplacer par le plan parcellaire réel si disponible
 
 ## Le formulaire de contact
