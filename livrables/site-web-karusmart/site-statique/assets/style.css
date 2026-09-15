@@ -133,6 +133,20 @@ p { margin: 0; }
 .ks-submit:hover { background: #12171a; }
 
 @media (max-width: 900px) {
-  h1 { font-size: 36px !important; }
-  h2 { font-size: 28px !important; }
+  h1 { font-size: 34px !important; }
+  h2 { font-size: 26px !important; }
+}
+
+@media (max-width: 800px) {
+  .stack-mobile { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 480px) {
+  header { padding: 14px 16px !important; }
+  .header-brand img { height: 34px !important; }
+  section { padding-left: 16px !important; padding-right: 16px !important; }
+  h1 { font-size: 28px !important; }
+  h2 { font-size: 22px !important; }
+  .hero-inner { padding-top: 48px !important; padding-bottom: 48px !important; }
+  .hero-card { padding: 24px 20px !important; }
 }
